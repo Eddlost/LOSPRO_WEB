@@ -643,7 +643,7 @@ a { color: inherit; text-decoration: none; }
 .article-body p { margin-bottom: 1.4rem; color: var(--concrete-200); }
 .article-body ul { margin: 1rem 0 1.6rem 1.2rem; }
 .article-body li { margin-bottom: .6rem; color: var(--concrete-200); }
-.article-figure { margin: 2.5rem 0; }
+.article-figure { margin: 2.5rem 0; position: relative; }
 .article-figure img {
   width: 100%; height: auto; display: block;
   border: 1px solid var(--concrete-700);
@@ -654,6 +654,42 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-mono); font-size: .78rem; letter-spacing: .04em;
   color: var(--concrete-300); margin-top: .8rem; padding-left: .8rem;
   border-left: 2px solid var(--orange); line-height: 1.5;
+}
+.article-figure.img-missing img { display: none; }
+.article-figure.img-missing::before {
+  content: 'Náhled bude doplněn'; display: block;
+  width: 100%; aspect-ratio: 16/10;
+  background:
+    repeating-linear-gradient(45deg, rgba(168,85,247,0.06) 0 12px, transparent 12px 24px),
+    linear-gradient(135deg, var(--concrete-800), var(--concrete-900));
+  border: 1px dashed var(--concrete-600);
+  display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; color: var(--concrete-400);
+}
+
+/* DIMKO preview */
+.dimko-preview-section { background: linear-gradient(180deg, transparent, rgba(124,58,237,0.04)); }
+.dimko-preview { max-width: 1100px; margin: 3rem auto 0; position: relative; }
+.dimko-preview img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid rgba(168,85,247,0.3);
+  background: var(--concrete-800);
+  box-shadow: 0 24px 60px rgba(124,58,237,0.25), 0 0 0 1px rgba(168,85,247,0.15);
+}
+.dimko-preview figcaption {
+  font-family: var(--font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: #c084fc; text-align: center; margin-top: 1.2rem;
+}
+.dimko-preview.img-missing img { display: none; }
+.dimko-preview.img-missing::before {
+  content: 'Screenshot pilotního UI — coming soon';
+  display: grid; place-items: center;
+  width: 100%; aspect-ratio: 16/10;
+  background:
+    repeating-linear-gradient(45deg, rgba(168,85,247,0.08) 0 14px, transparent 14px 28px),
+    linear-gradient(135deg, #14101c, #1c1424);
+  border: 1px dashed #a855f7;
+  font-family: var(--font-mono); font-size: .85rem; letter-spacing: .2em; text-transform: uppercase; color: #c084fc;
 }
 .article-body blockquote {
   border-left: 3px solid var(--orange); padding: 1rem 1.5rem;
