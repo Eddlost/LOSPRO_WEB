@@ -78,15 +78,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* =========================================================
-   Cursor
-   ========================================================= */
-.cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); }
-.cursor-dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; transition: transform .08s linear; }
-.cursor-ring { width: 40px; height: 40px; border: 1px solid var(--orange); border-radius: 50%; transition: transform .25s var(--ease), width .25s var(--ease), height .25s var(--ease), background .2s; mix-blend-mode: difference; }
-.cursor-ring.hover { width: 70px; height: 70px; background: rgba(255,106,26,0.15); }
-@media (pointer: coarse) { .cursor-dot, .cursor-ring { display: none; } }
-
-/* =========================================================
    Navigation
    ========================================================= */
 .nav {
