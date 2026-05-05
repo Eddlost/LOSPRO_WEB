@@ -1,0 +1,423 @@
+---
+import LayoutFuturistic from '../layouts/LayoutFuturistic.astro';
+---
+
+<LayoutFuturistic>
+
+<!-- ======================= NAV ======================= -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo" data-cursor="hover">
+      <span class="logo-mark">L</span>
+      <span>LOSPRO</span>
+    </a>
+    <nav class="mobile-menu" id="mobile-menu">
+      <div class="nav-links">
+        <a href="#sluzby">01 / Služby</a>
+        <a href="#reference">02 / Reference</a>
+        <a href="galerie.html">03 / Galerie</a>
+        <a href="#kontakt">04 / Kontakt</a>
+      </div>
+      <a href="#kontakt" class="nav-cta" data-cursor="hover">Poptávka →</a>
+    </nav>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="hero">
+  <div class="hero-bg-img"></div>
+  <div class="grid-lines"></div>
+  <div class="hero-scanline"></div>
+
+  <div class="container hero-content">
+    <div class="hero-tag">
+      <span class="dot"></span>
+      <span class="mono">Systém / Online — přijímáme projekty 2026</span>
+    </div>
+
+    <h1>
+      <span class="line"><span data-scramble="Stavíme">Stavíme</span></span>
+      <span class="line"><span data-scramble="digitální páteř">digitální páteř</span></span>
+      <span class="line"><span data-scramble="moderní výstavby.">moderní výstavby.</span></span>
+    </h1>
+
+    <p class="hero-lead">
+      LOSPRO je stavební management nové generace. Spojujeme 25 let zkušeností v oboru s BIM technologií, AI-asistovanou koordinací a reálným časem dat. Od myšlenky po klíč v ruce.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#kontakt" class="btn btn-primary" data-cursor="hover">
+        Poptávka projektu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#sluzby" class="btn btn-ghost" data-cursor="hover">
+        Prozkoumat služby
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <div class="cell">
+      <span class="k">// 01</span>
+      <span class="v" data-counter="25">0</span>
+      <span class="muted">let zkušeností</span>
+    </div>
+    <div class="cell">
+      <span class="k">// 02</span>
+      <span class="v" data-counter="180">0</span>
+      <span class="muted">realizací</span>
+    </div>
+    <div class="cell">
+      <span class="k">// 03</span>
+      <span class="v">BIM</span>
+      <span class="muted">level 3 workflow</span>
+    </div>
+    <div class="cell">
+      <span class="k">// 04</span>
+      <span class="v">360°</span>
+      <span class="muted">pokrytí projektu</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MARQUEE ======================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>BIM koordinace</span>
+    <span>Projektová dokumentace</span>
+    <span>Stavební dozor</span>
+    <span>Facility management</span>
+    <span>Due diligence</span>
+    <span>Developerský servis</span>
+    <span>BIM koordinace</span>
+    <span>Projektová dokumentace</span>
+    <span>Stavební dozor</span>
+    <span>Facility management</span>
+    <span>Due diligence</span>
+    <span>Developerský servis</span>
+  </div>
+</div>
+
+<!-- ======================= SLUŽBY ======================= -->
+<section class="section" id="sluzby">
+  <div class="grid-lines"></div>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head-text">
+        <span class="section-number">// 01 — Služby</span>
+        <h2>Kompletní stack<br/>stavebního managementu</h2>
+      </div>
+      <p class="muted" style="max-width: 420px;">
+        Šest dílčích disciplín. Jedna koordinovaná platforma. Vaše projekty od studie po kolaudaci v jednom systému.
+      </p>
+    </div>
+
+    <div class="services-grid reveal">
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/01</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h6M9 13h6M9 17h6"/></svg>
+        </div>
+        <h3>Developer servis</h3>
+        <p>Komplexní servis pro developery — od akvizice pozemku, přes studii proveditelnosti, povolovací řízení až po předání klientům.</p>
+        <div class="service-tags">
+          <span class="service-tag">Akvizice</span>
+          <span class="service-tag">Feasibility</span>
+          <span class="service-tag">Permitting</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/02</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 3v18M15 9v12"/></svg>
+        </div>
+        <h3>BIM projektování</h3>
+        <p>Digitální dvojče stavby před prvním výkopem. Revit, IFC, clash detection, 4D/5D plánní a single source of truth pro všechny stakeholdery.</p>
+        <div class="service-tags">
+          <span class="service-tag">Revit</span>
+          <span class="service-tag">IFC</span>
+          <span class="service-tag">4D/5D</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/03</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9L12 2zM12 2v18M3 6.5l9 4.5 9-4.5"/></svg>
+        </div>
+        <h3>Architektonická studie</h3>
+        <p>Od první skici po finální 3D vizualizaci. Koncept, hmotová studie, variantní řešení a prezentační materiály pro investory i úřady.</p>
+        <div class="service-tags">
+          <span class="service-tag">Koncept</span>
+          <span class="service-tag">Vizualizace</span>
+          <span class="service-tag">VR preview</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/04</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>Projektový management</h3>
+        <p>Koordinace všech profesí, termínů, rozpočtu a kvality. Real-time reporting, gantt dashboardy, risk register — vše v jednom rozhraní.</p>
+        <div class="service-tags">
+          <span class="service-tag">PMP</span>
+          <span class="service-tag">Gantt</span>
+          <span class="service-tag">Risk mgmt</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/05</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 20h20M4 20V8l8-5 8 5v12M9 20v-6h6v6"/></svg>
+        </div>
+        <h3>Stavební dozor (TDI)</h3>
+        <p>Technický dozor investora s denní kontrolou kvality, výkazů, BOZP a dodržování harmonogramu. Foto-dokumentace a digitální akceptace.</p>
+        <div class="service-tags">
+          <span class="service-tag">QA/QC</span>
+          <span class="service-tag">BOZP</span>
+          <span class="service-tag">Foto-log</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/06</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1v6m0 10v6M4.2 4.2l4.2 4.2m7.2 7.2l4.2 4.2M1 12h6m10 0h6M4.2 19.8l4.2-4.2m7.2-7.2l4.2-4.2"/></svg>
+        </div>
+        <h3>Facility &amp; Post-delivery</h3>
+        <p>Provoz budovy po předání. Prediktivní údržba, ener-monitoring, digital twin napojený na IoT. Život budovy nekončí kolaudací.</p>
+        <div class="service-tags">
+          <span class="service-tag">IoT</span>
+          <span class="service-tag">Digital twin</span>
+          <span class="service-tag">Maintenance</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- Process -->
+    <div class="process reveal-stagger">
+      <div class="process-step"><span class="step-num">→ 01</span><h4>Konzultace</h4><p>Bezplatná analyza záměru, site visit, predbežný rozpočet.</p></div>
+      <div class="process-step"><span class="step-num">→ 02</span><h4>Studie</h4><p>Architektonická studie s variantami, vizualizace, cash-flow model.</p></div>
+      <div class="process-step"><span class="step-num">→ 03</span><h4>Projekt</h4><p>BIM projektová dokumentace, koordinace profesí, povolení.</p></div>
+      <div class="process-step"><span class="step-num">→ 04</span><h4>Realizace</h4><p>Výběr dodavatele, dozor, koordinace, denní reporting.</p></div>
+      <div class="process-step"><span class="step-num">→ 05</span><h4>Předání</h4><p>Kolaudace, digital twin handover, zárušní servis, monitoring.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= REFERENCE ======================= -->
+<section class="section" id="reference">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head-text">
+        <span class="section-number">// 02 — Reference</span>
+        <h2>Projekty, které<br/>jsme postavili</h2>
+      </div>
+      <a href="galerie.html" class="btn btn-ghost" data-cursor="hover">
+        Všechny projekty
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="projects-grid reveal">
+      <a href="galerie.html#p01" class="project wide" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(135deg, #3a3a40, #1c1c1f);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Rezidence / Praha 5 / 2025</span>
+          <h3>Vivus Residence</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="galerie.html#p02" class="project tall" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(160deg, #8B5A2B, #242428);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Komerce / Brno / 2024</span>
+          <h3>DI5 Tower</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="galerie.html#p03" class="project small" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(120deg, #5a5a62, #161618);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Rekonstrukce / 2024</span>
+          <h3>Industrial Loft</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="galerie.html#p04" class="project small" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(100deg, #ff6a1a, #242428);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Public / 2023</span>
+          <h3>Forum Center</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="galerie.html#p05" class="project small" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(140deg, #3a3a40, #8c8c95);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Rezidence / 2023</span>
+          <h3>Vila Stromovka</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= KONTAKT ======================= -->
+<section class="section" id="kontakt">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-number">// 04 — Kontakt</span>
+        <h2>Poptávka<br/>projektu</h2>
+        <p>Váš projekt začíná jednou zprávou. Odpovídáme do 24 hodin a domluvíme bezplatnou konzultaci.</p>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7l9 6 9-6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>
+            <div>
+              <div class="label">E-mail</div>
+              <div class="val">info@lospro.cz</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <div class="label">Telefon / Po–Pá 8:00 — 17:00</div>
+              <div class="val">+420 777 123 456</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div class="label">Studio</div>
+              <div class="val">Křižíkova 148, Praha 8</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="form reveal" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label>Jméno <span class="req">*</span></label>
+            <input type="text" name="name" required minlength="2" />
+            <span class="err-msg">Musí mít alespoň 2 znaky.</span>
+          </div>
+          <div class="field">
+            <label>Firma</label>
+            <input type="text" name="company" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label>E-mail <span class="req">*</span></label>
+            <input type="email" name="email" required />
+            <span class="err-msg">Neplatný e-mail.</span>
+          </div>
+          <div class="field">
+            <label>Telefon</label>
+            <input type="tel" name="phone" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Typ projektu <span class="req">*</span></label>
+          <select name="type" required>
+            <option value="">— vyberte —</option>
+            <option>Rezidence / novostavba</option>
+            <option>Komerční objekt</option>
+            <option>Rekonstrukce</option>
+            <option>Studie proveditelnosti</option>
+            <option>BIM konzultace</option>
+            <option>Jiné</option>
+          </select>
+          <span class="err-msg">Vyberte typ projektu.</span>
+        </div>
+        <div class="field">
+          <label>Popis záměru <span class="req">*</span></label>
+          <textarea name="message" required minlength="20" placeholder="Lokalita, rozsah, termín, rozpočet — co můžete, sdílejte."></textarea>
+          <span class="err-msg">Minimální délka 20 znaků.</span>
+        </div>
+        <div class="form-submit">
+          <span class="form-note">&lt;/ odpovídáme do 24 h &gt;</span>
+          <button type="submit" class="btn btn-primary" data-cursor="hover">
+            Odeslat poptávku
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div class="form-success" id="form-success">
+          ✓ DONE — poptávka byla odeslána. Brzy se ozveme.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 1.2rem;">
+          <span class="logo-mark">L</span>
+          <span>LOSPRO</span>
+        </div>
+        <p style="font-size: .9rem; max-width: 320px;">Stavební management nové generace. 25+ let zkušeností v pražském developmentu, BIM-first workflow, transparentní reporting.</p>
+      </div>
+      <div>
+        <h5>Navigace</h5>
+        <ul>
+          <li><a href="#hero">Domů</a></li>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#reference">Reference</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li>info@lospro.cz</li>
+          <li>+420 777 123 456</li>
+          <li>Křižíkova 148<br/>186 00 Praha 8</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Sociální sítě</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Behance</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-big">LOSPRO.2026</div>
+
+    <div class="footer-bottom">
+      <div>© 2026 LOSPRO s.r.o. — IČO 12345678</div>
+      <div>Made with concrete & code.</div>
+    </div>
+  </div>
+</footer>
+
+</LayoutFuturistic>

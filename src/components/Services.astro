@@ -1,0 +1,91 @@
+---
+const services = [
+  {
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>`,
+    title: 'Architektonické studie & studie proveditelnosti',
+    desc: 'Posoudíme váš záměr z technického, právního i ekonomického pohledu. Zpracujeme architektonickou studii a studii proveditelnosti, na jejichž základě se můžete správně rozhodnout.',
+    tags: ['Architektonická studie', 'Studie proveditelnosti', 'Územní analýza'],
+    highlight: false,
+  },
+  {
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>`,
+    title: 'Inženýring & projektová dokumentace',
+    desc: 'Zajistíme veškerou projektovou dokumentaci pro územní řízení, stavební povolení i realizaci. Koordinujeme všechny profese a jednáme s úřady za vás.',
+    tags: ['Projektová dokumentace', 'Stavební povolení', 'Koordinace profesí'],
+    highlight: true,
+  },
+  {
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    title: 'Sestavení realizačního týmu',
+    desc: 'Máme síť prověřených dodavatelů, projektantů a řemeslníků. Sestavíme optimální tým pro realizaci vašeho projektu a zajistíme jeho řízení od první lopaty po kolaudaci.',
+    tags: ['Výběr dodavatelů', 'Řízení stavby', 'TDI'],
+    highlight: false,
+  },
+  {
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>`,
+    title: 'BIM integrace od A do Z',
+    desc: 'Implementujeme Building Information Modeling napříč celým projektem. BIM snižuje chybovost, zlepšuje koordinaci a šetří náklady — od návrhu přes realizaci až po správu budovy.',
+    tags: ['BIM modelování', 'Koordinace kolizí', 'Facility management'],
+    highlight: false,
+  },
+];
+---
+
+<section id="sluzby" class="py-24 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-brand-600 font-semibold text-sm tracking-widest uppercase">Služby</span>
+      <h2 class="section-title mt-2">Co pro vás dokážeme</h2>
+      <p class="section-subtitle">
+        Komplexní pokrytí celého životního cyklu stavebního projektu —
+        od prvního nápadu po klíč v ruce.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {services.map(s => (
+        <div
+          class:list={[
+            'rounded-2xl p-7 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl',
+            s.highlight
+              ? 'bg-brand-700 text-white shadow-lg shadow-brand-200'
+              : 'bg-white text-gray-900 border border-gray-100 shadow-sm',
+          ]}
+        >
+          <!-- Icon -->
+          <div
+            class:list={[
+              'w-12 h-12 rounded-xl flex items-center justify-center',
+              s.highlight ? 'bg-brand-600' : 'bg-brand-50 text-brand-600',
+            ]}
+            set:html={s.icon}
+          />
+
+          <h3 class:list={['font-bold text-lg leading-snug', s.highlight ? 'text-white' : 'text-gray-900']}>
+            {s.title}
+          </h3>
+
+          <p class:list={['text-sm leading-relaxed flex-1', s.highlight ? 'text-brand-100' : 'text-gray-600']}>
+            {s.desc}
+          </p>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2 mt-auto">
+            {s.tags.map(tag => (
+              <span
+                class:list={[
+                  'text-xs font-medium px-2.5 py-1 rounded-full',
+                  s.highlight
+                    ? 'bg-brand-600 text-brand-100'
+                    : 'bg-gray-100 text-gray-600',
+                ]}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+---
+// Replace 'lospro' with your actual Cal.com username/slug
+const calUsername = 'lospro';
+const calEventSlug = 'konzultace-30min';
+---
+
+<section id="rezervace" class="py-24 bg-gradient-to-br from-brand-800 to-brand-600">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="text-brand-200 font-semibold text-sm tracking-widest uppercase">Rezervace</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+        Rezervujte si konzultaci zdarma
+      </h2>
+      <p class="text-brand-100 text-lg max-w-xl mx-auto">
+        30minutový hovor, kde zjistíme, jak vám můžeme pomoci. Bez závazků, bez prodejního tlaku.
+      </p>
+    </div>
+
+    <!-- Cal.com inline embed -->
+    <div
+      class="bg-white rounded-2xl overflow-hidden shadow-2xl mx-auto max-w-4xl"
+      style="min-height: 600px;"
+    >
+      <div
+        id="cal-booking-embed"
+        data-cal-link={`${calUsername}/${calEventSlug}`}
+        data-cal-namespace="konzultace"
+        data-cal-config='{"layout":"month_view","theme":"light"}'
+        style="width:100%;height:100%;min-height:600px;"
+      ></div>
+    </div>
+
+    <!-- Fallback / direct link -->
+    <p class="text-center text-brand-200 text-sm mt-6">
+      Problém s načtením kalendáře?
+      <a
+        href={`https://cal.com/${calUsername}/${calEventSlug}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-white underline hover:text-brand-100"
+      >
+        Otevřete rezervaci v novém okně
+      </a>
+    </p>
+  </div>
+</section>
+
+<script>
+  // Initialize Cal.com inline embed after page load
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof Cal !== 'undefined') {
+      Cal('inline', {
+        elementOrSelector: '#cal-booking-embed',
+        calLink: (document.getElementById('cal-booking-embed') as HTMLElement)?.dataset.calLink || '',
+        config: { layout: 'month_view', theme: 'light' },
+      });
+    }
+  });
+</script>

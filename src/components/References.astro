@@ -1,0 +1,75 @@
+---
+const b2b = [
+  {
+    name: 'Vivus',
+    type: 'Developer',
+    desc: 'Spolupráce na přípravě a realizaci rezidenčních projektů. Komplexní developer servis včetně projektové dokumentace a koordinace dodavatelů.',
+    initials: 'VI',
+    color: 'bg-navy-700',
+  },
+  {
+    name: 'DI5',
+    type: 'Projektant',
+    desc: 'Partnerství v oblasti architektonických studií a projektové dokumentace. Společné projekty s důrazem na kvalitu zpracování a BIM metodiku.',
+    initials: 'D5',
+    color: 'bg-brand-700',
+  },
+];
+---
+
+<section id="reference" class="py-24 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="text-brand-600 font-semibold text-sm tracking-widest uppercase">Reference</span>
+      <h2 class="section-title mt-2">Pracujeme s těmi nejlepšími</h2>
+      <p class="section-subtitle">
+        Důvěřují nám renomovaní developeři, projekční firmy i soukromí investoři.
+      </p>
+    </div>
+
+    <!-- B2B -->
+    <div class="mb-14">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-xs font-bold tracking-widest uppercase text-gray-400">B2B — Firemní klienti</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl">
+        {b2b.map(c => (
+          <div class="bg-white rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow border border-gray-100 flex flex-col gap-5">
+            <div class="flex items-center gap-4">
+              <div class:list={['w-13 h-13 w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-lg flex-shrink-0', c.color]}>
+                {c.initials}
+              </div>
+              <div>
+                <h3 class="font-bold text-xl text-gray-900">{c.name}</h3>
+                <span class="text-sm font-medium text-brand-600 bg-brand-50 px-2.5 py-0.5 rounded-full">
+                  {c.type}
+                </span>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm leading-relaxed">{c.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- B2C -->
+    <div>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-xs font-bold tracking-widest uppercase text-gray-400">B2C — Soukromí investoři</span>
+        <div class="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div class="bg-white rounded-2xl border border-dashed border-gray-200 p-10 text-center max-w-3xl">
+        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 4v16m8-8H4"/>
+          </svg>
+        </div>
+        <p class="text-gray-400 text-sm">Reference z B2C sektoru průběžně doplňujeme.</p>
+      </div>
+    </div>
+
+    <p class="text-gray-400 text-xs mt-10 text-center">Další reference průběžně doplňujeme.</p>
+  </div>
+</section>

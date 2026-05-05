@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie projekt&#367; — LOSPRO</title>
+  <meta name="description" content="Portfolio LOSPRO: rezidence, komerce, rekonstrukce, ve&#345;ejn&eacute; stavby. 25 let v prax&iacute;, 180+ realizac&iacute;." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<!-- NAV -->
+<header class="nav scrolled" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" data-cursor="hover">
+      <span class="logo-mark">L</span>
+      <span>LOSPRO</span>
+    </a>
+    <nav class="mobile-menu" id="mobile-menu">
+      <div class="nav-links">
+        <a href="index.html#sluzby">01 / Slu&#382;by</a>
+        <a href="index.html#reference">02 / Reference</a>
+        <a href="galerie.html">03 / Galerie</a>
+        <a href="index.html#kontakt">04 / Kontakt</a>
+      </div>
+      <a href="index.html#kontakt" class="nav-cta" data-cursor="hover">Popt&aacute;vka &rarr;</a>
+    </nav>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="gallery-hero">
+  <div class="grid-lines"></div>
+  <div class="container">
+    <span class="mono">// Portfolio — 03</span>
+    <h1 style="margin-top: 1rem;">Galerie<br/>realizac&iacute;</h1>
+    <p class="lead muted">
+      180+ dokon&#269;en&yacute;ch projekt&#367; v &#268;esk&eacute; republice i zahrani&#269;&iacute;. Filtrujte podle kategorie, otev&#345;ete detail &mdash; ka&#382;d&yacute; projekt je origin&aacute;l.
+    </p>
+  </div>
+</section>
+
+<!-- FILTER -->
+<div class="container">
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">V&scaron;echny (12)</button>
+    <button class="filter-btn" data-filter="residential">Rezidence</button>
+    <button class="filter-btn" data-filter="commercial">Komerce</button>
+    <button class="filter-btn" data-filter="renovation">Rekonstrukce</button>
+    <button class="filter-btn" data-filter="public">Ve&#345;ejn&eacute;</button>
+  </div>
+</div>
+
+<!-- GRID -->
+<section class="container">
+  <div class="gallery-grid" id="gallery-grid">
+
+    <article class="gallery-item" data-category="residential" data-title="Vivus Residence" data-meta="Rezidence / Praha 5 / 2025" data-desc="Multifunk&#269;n&iacute; rezidence 84 bytov&yacute;ch jednotek s podzemn&iacute;m parkov&iacute;m, zelenou st&#345;echou a LEED Gold certifikac&iacute;." data-bg="linear-gradient(135deg, #3a3a40, #1c1c1f)">
+      <div class="project-img" style="background: linear-gradient(135deg, #3a3a40, #1c1c1f);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Rezidence / Praha 5 / 2025</span>
+        <h3>Vivus Residence</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="commercial" data-title="DI5 Tower" data-meta="Komerce / Brno / 2024" data-desc="Administrativn&iacute; v&#283;&#382; 14 pater, hybridn&iacute; konstrukce d&#345;evo-beton, smart facade s adaptivn&iacute;m st&iacute;n&#283;n&iacute;m." data-bg="linear-gradient(160deg, #8B5A2B, #242428)">
+      <div class="project-img" style="background: linear-gradient(160deg, #8B5A2B, #242428);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Komerce / Brno / 2024</span>
+        <h3>DI5 Tower</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="renovation" data-title="Industrial Loft" data-meta="Rekonstrukce / Holesovice / 2024" data-desc="Rekonverze skladov&yacute; hal z 20. let na co-working a showroom. Zachov&aacute;ny p&#367;vodn&iacute; konstrukce, dopln&#283;no ocelov&yacute;mi inzerty." data-bg="linear-gradient(120deg, #5a5a62, #161618)">
+      <div class="project-img" style="background: linear-gradient(120deg, #5a5a62, #161618);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Rekonstrukce / 2024</span>
+        <h3>Industrial Loft</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="public" data-title="Forum Center" data-meta="Ve&#345;ejn&eacute; / Plze&#328; / 2023" data-desc="Kulturn&iacute; centrum s divadeln&iacute;m s&aacute;lem pro 400 osob, knihovnou a komunitn&iacute;mi dilnami. Betonov&aacute; monolitick&aacute; konstrukce." data-bg="linear-gradient(100deg, #ff6a1a, #242428)">
+      <div class="project-img" style="background: linear-gradient(100deg, #ff6a1a, #242428);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Public / 2023</span>
+        <h3>Forum Center</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="residential" data-title="Vila Stromovka" data-meta="Rezidence / Praha 7 / 2023" data-desc="Individu&aacute;ln&iacute; vila 340 m&sup2; s podzemn&iacute;m bazenem, fotovoltaika, rekupera&#269;n&iacute; VZT, dre&#345;ov&aacute; fas&aacute;da thermowood." data-bg="linear-gradient(140deg, #3a3a40, #8c8c95)">
+      <div class="project-img" style="background: linear-gradient(140deg, #3a3a40, #8c8c95);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Rezidence / 2023</span>
+        <h3>Vila Stromovka</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="commercial" data-title="Retail Park Karlin" data-meta="Komerce / Karlin / 2023" data-desc="Retail park 12 500 m&sup2; GLA, 6 n&aacute;jemn&iacute;k&#367;, zelen&aacute; st&#345;echa, 220 parkovac&iacute;ch st&aacute;n&iacute; s EV charging." data-bg="linear-gradient(110deg, #242428, #ff6a1a)">
+      <div class="project-img" style="background: linear-gradient(110deg, #242428, #ff6a1a);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Komerce / 2023</span>
+        <h3>Retail Park Karlin</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="renovation" data-title="Funkcionalistick&aacute; vila" data-meta="Rekonstrukce / Dejvice / 2022" data-desc="Revitalizace vily z 30. let 20. stol. P&aacute;sov&aacute; okna v p&#367;vodn&iacute;m designu, modern&iacute; techno v dob&#283;." data-bg="linear-gradient(150deg, #b8b8bf, #242428)">
+      <div class="project-img" style="background: linear-gradient(150deg, #b8b8bf, #242428);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Rekonstrukce / 2022</span>
+        <h3>Funkcionalistick&aacute; vila</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="residential" data-title="Bydlen&iacute; Holesovice" data-meta="Rezidence / Praha 7 / 2022" data-desc="3 bytov&eacute; domy, celkem 62 jednotek, spole&#269;n&yacute; zahradn&iacute; dvoreek, st&#345;e&scaron;n&iacute; terasa." data-bg="linear-gradient(130deg, #8B5A2B, #161618)">
+      <div class="project-img" style="background: linear-gradient(130deg, #8B5A2B, #161618);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Rezidence / 2022</span>
+        <h3>Bydlen&iacute; Hole&scaron;ovice</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="public" data-title="Sportovn&iacute; hala Libere" data-meta="Ve&#345;ejn&eacute; / Liberec / 2022" data-desc="Multifunk&#269;n&iacute; sportovn&iacute; hala s kapacitou 2500 div&aacute;k&#367;, d&#345;ev&#283;n&aacute; lepen&aacute; konstrukce rozpon 52 m." data-bg="linear-gradient(120deg, #ff8636, #1c1c1f)">
+      <div class="project-img" style="background: linear-gradient(120deg, #ff8636, #1c1c1f);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Ve&#345;ejn&eacute; / 2022</span>
+        <h3>Sportovn&iacute; hala Liberec</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="commercial" data-title="Office Campus Smichov" data-meta="Komerce / Praha 5 / 2021" data-desc="Kancel&aacute;&#345;sk&yacute; kampus 18 000 m&sup2; NLA, 3 budovy propojen&eacute; atriem, green walls, WELL Gold." data-bg="linear-gradient(160deg, #5a5a62, #ff6a1a)">
+      <div class="project-img" style="background: linear-gradient(160deg, #5a5a62, #ff6a1a);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Komerce / 2021</span>
+        <h3>Office Campus Sm&iacute;chov</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="residential" data-title="Loftov&eacute; byty Karlin" data-meta="Rezidence / Karlin / 2021" data-desc="Konverze b&yacute;val&eacute; tov&aacute;rny na 38 loftov&yacute;ch byt&#367; s prosklen&yacute;mi p&#345;ep&aacute;&#382;kami, lit&yacute;mi betonov&yacute;mi podlahami." data-bg="linear-gradient(145deg, #242428, #8c8c95)">
+      <div class="project-img" style="background: linear-gradient(145deg, #242428, #8c8c95);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Rezidence / 2021</span>
+        <h3>Loftov&eacute; byty Karl&iacute;n</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+    <article class="gallery-item" data-category="renovation" data-title="Historick&yacute; hotel" data-meta="Rekonstrukce / Star&eacute; M&#283;sto / 2020" data-desc="Kompletn&iacute; rekonstrukce boutique hotelu v p&aacute;m&aacute;tkov&eacute; z&oacute;n&#283;, 48 pokoj&#367;, spa, restaurace, zachov&aacute;na historick&aacute; fasada." data-bg="linear-gradient(115deg, #b8b8bf, #8B5A2B)">
+      <div class="project-img" style="background: linear-gradient(115deg, #b8b8bf, #8B5A2B);"></div>
+      <div class="project-overlay">
+        <span class="project-meta">Rekonstrukce / 2020</span>
+        <h3>Historick&yacute; hotel</h3>
+      </div>
+      <div class="project-arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="section" style="padding-top: 2rem;">
+  <div class="container">
+    <div class="form" style="text-align: center; padding: 4rem 2rem;">
+      <span class="mono" style="color: var(--orange);">// Dal&#353;&iacute; krok</span>
+      <h2 style="margin: 1rem 0 1.5rem;">M&aacute;te projekt?<br/>Pojďme stav&#283;t.</h2>
+      <a href="index.html#kontakt" class="btn btn-primary" data-cursor="hover" style="margin-top: 1rem;">
+        Sjednat konzultaci
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Zav&#345;&iacute;t">&times;</button>
+    <div class="lightbox-img" id="lightbox-img"></div>
+    <span class="meta" id="lightbox-meta"></span>
+    <h3 id="lightbox-title"></h3>
+    <p style="margin-top: 1rem; color: var(--concrete-200);" id="lightbox-desc"></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 1.2rem;">
+          <span class="logo-mark">L</span>
+          <span>LOSPRO</span>
+        </div>
+        <p style="font-size: .9rem; max-width: 320px;">Stavebn&iacute; management nov&eacute; generace. 25+ let zku&scaron;enost&iacute; v pra&#382;sk&eacute;m developmentu, BIM-first workflow, transparentn&iacute; reporting.</p>
+      </div>
+      <div>
+        <h5>Navigace</h5>
+        <ul>
+          <li><a href="index.html">Dom&#367;</a></li>
+          <li><a href="index.html#sluzby">Slu&#382;by</a></li>
+          <li><a href="index.html#reference">Reference</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li>info@lospro.cz</li>
+          <li>+420 777 123 456</li>
+          <li>K&#345;i&#382;&iacute;kova 148<br/>186 00 Praha 8</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Soci&aacute;ln&iacute; s&iacute;t&#283;</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Behance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-big">LOSPRO.2026</div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 LOSPRO s.r.o. &mdash; I&#268;O 12345678</div>
+      <div>Made with concrete &amp; code.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

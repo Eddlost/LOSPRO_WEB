@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOSPRO — Stavebn&iacute; management 2.0</title>
+  <meta name="description" content="LOSPRO. Konstrukce. Koordinace. Kontrola. Stav&iacute;me digit&aacute;ln&iacute; p&aacute;te&#345; modern&iacute; v&yacute;stavby s BIM a 25+ lety zku&scaron;enost&iacute;." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+
+<!-- ======================= NAV ======================= -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo" data-cursor="hover">
+      <span class="logo-mark">L</span>
+      <span>LOSPRO</span>
+    </a>
+    <nav class="mobile-menu" id="mobile-menu">
+      <div class="nav-links">
+        <a href="#sluzby">01 / Slu&#382;by</a>
+        <a href="#reference">02 / Reference</a>
+        <a href="galerie.html">03 / Galerie</a>
+        <a href="#kontakt">04 / Kontakt</a>
+      </div>
+      <a href="#kontakt" class="nav-cta" data-cursor="hover">Popt&aacute;vka &rarr;</a>
+    </nav>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="hero">
+  <div class="hero-bg-img"></div>
+  <div class="grid-lines"></div>
+  <div class="hero-scanline"></div>
+
+  <div class="container hero-content">
+    <div class="hero-tag">
+      <span class="dot"></span>
+      <span class="mono">Syst&eacute;m / Online — p&#345;ij&iacute;m&aacute;me projekty 2026</span>
+    </div>
+
+    <h1>
+      <span class="line"><span data-scramble="Stav&iacute;me">Stav&iacute;me</span></span>
+      <span class="line"><span data-scramble="digit&aacute;ln&iacute; p&aacute;te&#345;">digit&aacute;ln&iacute; p&aacute;te&#345;</span></span>
+      <span class="line"><span data-scramble="modern&iacute; v&yacute;stavby.">modern&iacute; v&yacute;stavby.</span></span>
+    </h1>
+
+    <p class="hero-lead">
+      LOSPRO je stavebn&iacute; management nov&eacute; generace. Spojujeme 25 let zku&scaron;enost&iacute; v oboru s BIM technologi&iacute;, AI-asistovanou koordinac&iacute; a re&aacute;ln&yacute;m &#269;asem dat. Od my&scaron;lenky po kl&iacute;&#269; v ruce.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#kontakt" class="btn btn-primary" data-cursor="hover">
+        Popt&aacute;vka projektu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#sluzby" class="btn btn-ghost" data-cursor="hover">
+        Prozkoumat slu&#382;by
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <div class="cell">
+      <span class="k">// 01</span>
+      <span class="v" data-counter="25">0</span>
+      <span class="muted">let zku&scaron;enost&iacute;</span>
+    </div>
+    <div class="cell">
+      <span class="k">// 02</span>
+      <span class="v" data-counter="180">0</span>
+      <span class="muted">realizac&iacute;</span>
+    </div>
+    <div class="cell">
+      <span class="k">// 03</span>
+      <span class="v">BIM</span>
+      <span class="muted">level 3 workflow</span>
+    </div>
+    <div class="cell">
+      <span class="k">// 04</span>
+      <span class="v">360&deg;</span>
+      <span class="muted">pokryt&iacute; projektu</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MARQUEE ======================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>BIM koordinace</span>
+    <span>Projektov&aacute; dokumentace</span>
+    <span>Stavebn&iacute; dozor</span>
+    <span>Facility management</span>
+    <span>Due diligence</span>
+    <span>Developersk&yacute; servis</span>
+    <span>BIM koordinace</span>
+    <span>Projektov&aacute; dokumentace</span>
+    <span>Stavebn&iacute; dozor</span>
+    <span>Facility management</span>
+    <span>Due diligence</span>
+    <span>Developersk&yacute; servis</span>
+  </div>
+</div>
+
+<!-- ======================= SLUŽBY ======================= -->
+<section class="section" id="sluzby">
+  <div class="grid-lines"></div>
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head-text">
+        <span class="section-number">// 01 — Slu&#382;by</span>
+        <h2>Kompletn&iacute; stack<br/>stavebn&iacute;ho managementu</h2>
+      </div>
+      <p class="muted" style="max-width: 420px;">
+        &Scaron;est d&iacute;l&#269;&iacute;ch discipl&iacute;n. Jedna koordinovan&aacute; platforma. Va&scaron;e projekty od studie po kolaudaci v jednom syst&eacute;mu.
+      </p>
+    </div>
+
+    <div class="services-grid reveal">
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/01</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h6M9 13h6M9 17h6"/></svg>
+        </div>
+        <h3>Developer servis</h3>
+        <p>Komplexn&iacute; servis pro developery &mdash; od akvizice pozemku, p&#345;es studii proveditelnosti, povolovac&iacute; &#345;&iacute;zen&iacute; a&#382; po p&#345;ed&aacute;n&iacute; klient&#367;m.</p>
+        <div class="service-tags">
+          <span class="service-tag">Akvizice</span>
+          <span class="service-tag">Feasibility</span>
+          <span class="service-tag">Permitting</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/02</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 3v18M15 9v12"/></svg>
+        </div>
+        <h3>BIM projektov&aacute;n&iacute;</h3>
+        <p>Digit&aacute;ln&iacute; dvoj&#269;e stavby p&#345;ed prvn&iacute;m v&yacute;kopem. Revit, IFC, clash detection, 4D/5D plann&iacute;n a single source of truth pro v&scaron;echny stakeholdery.</p>
+        <div class="service-tags">
+          <span class="service-tag">Revit</span>
+          <span class="service-tag">IFC</span>
+          <span class="service-tag">4D/5D</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/03</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9L12 2zM12 2v18M3 6.5l9 4.5 9-4.5"/></svg>
+        </div>
+        <h3>Architektonick&aacute; studie</h3>
+        <p>Od prvn&iacute; skici po finaln&iacute; 3D vizualizaci. Koncept, hmotov&aacute; studie, variantn&iacute; &#345;e&scaron;en&iacute; a prezenta&#269;n&iacute; materi&aacute;ly pro investory i &uacute;&#345;ady.</p>
+        <div class="service-tags">
+          <span class="service-tag">Koncept</span>
+          <span class="service-tag">Vizualizace</span>
+          <span class="service-tag">VR preview</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/04</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>Projektov&yacute; management</h3>
+        <p>Koordinace v&scaron;ech profes&iacute;, termin&#367;, rozpo&#269;tu a kvality. Real-time reporting, gantt dashboardy, risk register &mdash; v&scaron;e v jednom rozhran&iacute;.</p>
+        <div class="service-tags">
+          <span class="service-tag">PMP</span>
+          <span class="service-tag">Gantt</span>
+          <span class="service-tag">Risk mgmt</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/05</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 20h20M4 20V8l8-5 8 5v12M9 20v-6h6v6"/></svg>
+        </div>
+        <h3>Stavebn&iacute; dozor (TDI)</h3>
+        <p>Technick&yacute; dozor investora s denn&iacute; kontrolou kvality, v&yacute;kaz&#367;, BOZP a dodr&#382;ov&aacute;n&iacute; harmonogramu. Foto-dokumentace a digit&aacute;ln&iacute; akceptace.</p>
+        <div class="service-tags">
+          <span class="service-tag">QA/QC</span>
+          <span class="service-tag">BOZP</span>
+          <span class="service-tag">Foto-log</span>
+        </div>
+      </article>
+
+      <article class="service-card" data-cursor="hover">
+        <span class="service-num">S/06</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1v6m0 10v6M4.2 4.2l4.2 4.2m7.2 7.2l4.2 4.2M1 12h6m10 0h6M4.2 19.8l4.2-4.2m7.2-7.2l4.2-4.2"/></svg>
+        </div>
+        <h3>Facility &amp; Post-delivery</h3>
+        <p>Provoz budovy po p&#345;ed&aacute;n&iacute;. Prediktivn&iacute; &uacute;dr&#382;ba, ener-monitoring, digital twin napojen&yacute; na IoT. &#381;ivot budovy nekon&#269;&iacute; kolaudac&iacute;.</p>
+        <div class="service-tags">
+          <span class="service-tag">IoT</span>
+          <span class="service-tag">Digital twin</span>
+          <span class="service-tag">Maintenance</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- Process -->
+    <div class="process reveal-stagger">
+      <div class="process-step"><span class="step-num">&rarr; 01</span><h4>Konzultace</h4><p>Bezplatn&aacute; analyza z&aacute;m&#283;ru, site visit, predb&#283;&#382;n&yacute; rozpo&#269;et.</p></div>
+      <div class="process-step"><span class="step-num">&rarr; 02</span><h4>Studie</h4><p>Architektonick&aacute; studie s variantami, vizualizace, cash-flow model.</p></div>
+      <div class="process-step"><span class="step-num">&rarr; 03</span><h4>Projekt</h4><p>BIM projektov&aacute; dokumentace, koordinace profes&iacute;, povolen&iacute;.</p></div>
+      <div class="process-step"><span class="step-num">&rarr; 04</span><h4>Realizace</h4><p>V&yacute;b&#283;r dodavatele, dozor, koordinace, denn&iacute; reporting.</p></div>
+      <div class="process-step"><span class="step-num">&rarr; 05</span><h4>P&#345;ed&aacute;n&iacute;</h4><p>Kolaudace, digital twin handover, z&aacute;ru&#269;n&iacute; servis, monitoring.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= REFERENCE ======================= -->
+<section class="section" id="reference">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head-text">
+        <span class="section-number">// 02 — Reference</span>
+        <h2>Projekty, kter&eacute;<br/>jsme postavili</h2>
+      </div>
+      <a href="galerie.html" class="btn btn-ghost" data-cursor="hover">
+        V&scaron;echny projekty
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="projects-grid reveal">
+      <a href="galerie.html#p01" class="project wide" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(135deg, #3a3a40, #1c1c1f);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Rezidence / Praha 5 / 2025</span>
+          <h3>Vivus Residence</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="galerie.html#p02" class="project tall" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(160deg, #8B5A2B, #242428);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Komerce / Brno / 2024</span>
+          <h3>DI5 Tower</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="galerie.html#p03" class="project small" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(120deg, #5a5a62, #161618);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Rekonstrukce / 2024</span>
+          <h3>Industrial Loft</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="galerie.html#p04" class="project small" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(100deg, #ff6a1a, #242428);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Public / 2023</span>
+          <h3>Forum Center</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+      <a href="galerie.html#p05" class="project small" data-cursor="hover">
+        <div class="project-img" style="background: linear-gradient(140deg, #3a3a40, #8c8c95);"></div>
+        <div class="project-overlay">
+          <span class="project-meta">Rezidence / 2023</span>
+          <h3>Vila Stromovka</h3>
+        </div>
+        <div class="project-arrow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= KONTAKT ======================= -->
+<section class="section" id="kontakt">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-number">// 04 — Kontakt</span>
+        <h2>Popt&aacute;vka<br/>projektu</h2>
+        <p>V&aacute;&scaron; projekt za&#269;&iacute;n&aacute; jednou zpr&aacute;vou. Odpov&iacute;me do 24 hodin a dom&luml;uv&iacute;me bezplatnou konzultaci.</p>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7l9 6 9-6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>
+            <div>
+              <div class="label">E-mail</div>
+              <div class="val">info@lospro.cz</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <div class="label">Telefon / Po–P&aacute; 8:00 — 17:00</div>
+              <div class="val">+420 777 123 456</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div class="label">Studio</div>
+              <div class="val">K&#345;i&#382;&iacute;kova 148, Praha 8</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="form reveal" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label>Jm&eacute;no <span class="req">*</span></label>
+            <input type="text" name="name" required minlength="2" />
+            <span class="err-msg">Mus&iacute; m&iacute;t alespo&#328; 2 znaky.</span>
+          </div>
+          <div class="field">
+            <label>Firma</label>
+            <input type="text" name="company" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label>E-mail <span class="req">*</span></label>
+            <input type="email" name="email" required />
+            <span class="err-msg">Neplatn&yacute; e-mail.</span>
+          </div>
+          <div class="field">
+            <label>Telefon</label>
+            <input type="tel" name="phone" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Typ projektu <span class="req">*</span></label>
+          <select name="type" required>
+            <option value="">&mdash; vyberte &mdash;</option>
+            <option>Rezidence / novostavba</option>
+            <option>Komer&#269;n&iacute; objekt</option>
+            <option>Rekonstrukce</option>
+            <option>Studie proveditelnosti</option>
+            <option>BIM konzultace</option>
+            <option>Jin&eacute;</option>
+          </select>
+          <span class="err-msg">Vyberte typ projektu.</span>
+        </div>
+        <div class="field">
+          <label>Popis z&aacute;m&#283;ru <span class="req">*</span></label>
+          <textarea name="message" required minlength="20" placeholder="Lokalita, rozsah, termin, rozpo&#269;et &mdash; co m&#367;&#382;ete, sd&iacute;lejte."></textarea>
+          <span class="err-msg">Minim&aacute;ln&iacute; d&eacute;lka 20 znak&#367;.</span>
+        </div>
+        <div class="form-submit">
+          <span class="form-note">&lt;/ odpov&iacute;me do 24 h &gt;</span>
+          <button type="submit" class="btn btn-primary" data-cursor="hover">
+            Odeslat popt&aacute;vku
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div class="form-success" id="form-success">
+          &#10003; DONE &mdash; popt&aacute;vka byla odesl&aacute;na. Brzy se ozveme.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 1.2rem;">
+          <span class="logo-mark">L</span>
+          <span>LOSPRO</span>
+        </div>
+        <p style="font-size: .9rem; max-width: 320px;">Stavebn&iacute; management nov&eacute; generace. 25+ let zku&scaron;enost&iacute; v pra&#382;sk&eacute;m developmentu, BIM-first workflow, transparentn&iacute; reporting.</p>
+      </div>
+      <div>
+        <h5>Navigace</h5>
+        <ul>
+          <li><a href="#hero">Dom&#367;</a></li>
+          <li><a href="#sluzby">Slu&#382;by</a></li>
+          <li><a href="#reference">Reference</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li>info@lospro.cz</li>
+          <li>+420 777 123 456</li>
+          <li>K&#345;i&#382;&iacute;kova 148<br/>186 00 Praha 8</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Soci&aacute;ln&iacute; s&iacute;t&#283;</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Behance</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-big">LOSPRO.2026</div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 LOSPRO s.r.o. &mdash; I&#268;O 12345678</div>
+      <div>Made with concrete &amp; code.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

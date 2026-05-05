@@ -1,0 +1,71 @@
+---
+const services = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    title: 'Investiční poradenství',
+    desc: 'Pomáháme investorům bezpečně vstoupit na trh s nemovitostmi. Analyzujeme příležitosti, rizika a reálnou návratnost ještě před tím, než utratíte první korunu.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
+    title: 'Developer & Realizace',
+    desc: 'Kompletní developer servis od architektonické studie a inženýringu přes výběr dodavatelů až po předání hotové stavby. Celý tým sestavíme za vás.',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>`,
+    title: 'BIM od A do Z',
+    desc: 'Moderní řízení projektů pomocí Building Information Modeling. Digitální model stavby od prvního nákresu po provoz — méně chyb, nižší náklady, plná transparentnost.',
+  },
+];
+---
+
+<section id="o-nas" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- LEFT: O nás -->
+      <div class="lg:sticky lg:top-24">
+        <span class="text-brand-600 font-semibold text-sm tracking-widest uppercase">O nás</span>
+        <h2 class="section-title mt-2">
+          Rodinná firma,<br />která staví na zkušenostech
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          LOSPRO Development je česká rodinná firma, kterou v roce 2025 založili
+          <strong class="text-gray-800">Petr Lošťák</strong> a <strong class="text-gray-800">Eduard Lošťák</strong>.
+          Petr přináší přes 25 let praxe z řízení projekční firmy — stovky úspěšně dokončených
+          projektů, hlubokou znalost českého stavebnictví a síť prověřených partnerů.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-10">
+          Naší ambicí je být součástí modernizace českého stavebnictví. Věříme, že kombinace
+          zkušeností z terénu a moderních nástrojů — zejména BIM — přináší investorům
+          i developerům zásadní konkurenční výhodu.
+        </p>
+        <a href="#rezervace" class="btn-primary">
+          Konzultace zdarma →
+        </a>
+      </div>
+
+      <!-- RIGHT: Služby -->
+      <div id="sluzby" class="space-y-5">
+        <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">Naše služby</p>
+        {services.map((s, i) => (
+          <div class="group flex gap-5 p-6 rounded-2xl border border-gray-100 bg-white hover:border-brand-200 hover:shadow-md transition-all duration-300">
+            <!-- Number + Icon -->
+            <div class="flex-shrink-0 flex flex-col items-center gap-2">
+              <div
+                class="w-11 h-11 rounded-xl flex items-center justify-center text-brand-600 bg-brand-50 group-hover:bg-brand-600 group-hover:text-white transition-colors"
+                set:html={s.icon}
+              />
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1 group-hover:text-brand-700 transition-colors">
+                {s.title}
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed">{s.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,97 @@
+---
+const currentYear = new Date().getFullYear();
+
+const navLinks = [
+  { label: 'O nás',     href: '#o-nas' },
+  { label: 'Služby',    href: '#sluzby' },
+  { label: 'Reference', href: '#reference' },
+  { label: 'Rezervace', href: '#rezervace' },
+];
+
+const contact = {
+  address: 'Praha, Česká republika',
+  phone: '+420 777 123 456',
+  email: 'info@lospro.cz',
+};
+---
+
+<footer id="kontakt" class="bg-navy-900 text-gray-300" style="background-color: #090F1A;">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-3 gap-12">
+
+      <!-- Brand -->
+      <div>
+        <img src="/logo.png" alt="LOSPRO Development" class="h-10 w-auto mb-4 brightness-0 invert" />
+        <p class="text-sm leading-relaxed text-gray-500 mb-6">
+          Bezpečné investice do nemovitostí. Od studie po realizaci.
+        </p>
+        <!-- LinkedIn placeholder -->
+        <a
+          href="#"
+          aria-label="LinkedIn"
+          class="w-9 h-9 bg-gray-800 hover:bg-brand-600 rounded-lg flex items-center justify-center transition-colors inline-flex"
+        >
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Navigace</h3>
+        <ul class="space-y-2">
+          {navLinks.map(link => (
+            <li>
+              <a href={link.href} class="text-sm text-gray-500 hover:text-white transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2 text-gray-500">
+            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            {contact.address}
+          </li>
+          <li>
+            <a href={`tel:${contact.phone.replace(/\s/g, '')}`}
+              class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              {contact.phone}
+            </a>
+          </li>
+          <li>
+            <a href={`mailto:${contact.email}`}
+              class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              {contact.email}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-600">
+      <span>© {currentYear} LOSPRO Development s.r.o. Všechna práva vyhrazena.</span>
+      <a href="#" class="hover:text-gray-400 transition-colors">Ochrana osobních údajů</a>
+    </div>
+  </div>
+</footer>
