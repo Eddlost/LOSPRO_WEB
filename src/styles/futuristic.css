@@ -311,6 +311,9 @@ a { color: inherit; text-decoration: none; }
 }
 .project-meta { font-family: var(--font-mono); font-size: .7rem; color: var(--orange); letter-spacing: .15em; text-transform: uppercase; }
 .project h3 { font-size: 1.4rem; text-transform: uppercase; letter-spacing: -0.01em; }
+.project.static { cursor: default; }
+.project.static:hover .project-img { filter: grayscale(0.4) contrast(1.05); transform: scale(1.02); }
+.project-caption { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; color: var(--concrete-200); margin-top: .4rem; line-height: 1.5; max-width: 520px; }
 .project-arrow {
   position: absolute; top: 1.5rem; right: 1.5rem; z-index: 3;
   width: 44px; height: 44px; display: grid; place-items: center;
