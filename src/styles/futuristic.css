@@ -643,6 +643,18 @@ a { color: inherit; text-decoration: none; }
 .article-body p { margin-bottom: 1.4rem; color: var(--concrete-200); }
 .article-body ul { margin: 1rem 0 1.6rem 1.2rem; }
 .article-body li { margin-bottom: .6rem; color: var(--concrete-200); }
+.article-figure { margin: 2.5rem 0; }
+.article-figure img {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--concrete-700);
+  background: var(--concrete-800);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+.article-figure figcaption {
+  font-family: var(--font-mono); font-size: .78rem; letter-spacing: .04em;
+  color: var(--concrete-300); margin-top: .8rem; padding-left: .8rem;
+  border-left: 2px solid var(--orange); line-height: 1.5;
+}
 .article-body blockquote {
   border-left: 3px solid var(--orange); padding: 1rem 1.5rem;
   background: var(--concrete-800); margin: 2rem 0;

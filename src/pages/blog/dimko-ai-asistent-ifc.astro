@@ -72,6 +72,11 @@ const post = {
         github.com/prokop321/tools — DIMKO Tools, pilot release
       </blockquote>
 
+      <figure class="article-figure">
+        <img src={`${base}images/dimko/dimko-ui-home.png`} alt="DIMKO úvodní obrazovka — Workflow karty: Kontrola požární bezpečnosti, Pasportizace IFC modelu, Barevná vizualizace skladeb podlah" loading="lazy" />
+        <figcaption>Prvotní UI demoverze. Tři předdefinované workflows + volný dotaz nad IFC modelem.</figcaption>
+      </figure>
+
       <h2>Co to zatím dělá</h2>
       <p>
         DIMKO Tools je <strong>agentický backend</strong> nad IFC modelem. Postavený na Gemini 3, TypeScriptu, Express API a Blenderu jako persistentním 3D enginu. Načte projekt s jedním nebo více IFC soubory (různé fáze DUR / DSP / DPS / DSPS, různé profese) a odpovídá na otázky o modelu — ať už jde o čistou datovou analýzu, generování výstupů, nebo kontrolu vůči normám.
@@ -88,6 +93,11 @@ const post = {
         <li><strong>Script library</strong> — úspěšné skripty se ukládají, parametrizují (<code>{`{{param}}`}</code>) a v dalších sessionech se reusují. Trust levels podle počtu úspěšných runů.</li>
       </ul>
 
+      <figure class="article-figure">
+        <img src={`${base}images/dimko/dimko-fire-doors.png`} alt="DIMKO odpovídá na dotaz: Kolik je na objektu dveří a kolik z nich má definovanou požární odolnost?" loading="lazy" />
+        <figcaption>Volný dotaz nad reálným modelem: 495 dveří celkem, ~94 s konkrétně definovanou požární odolností (EW 30/DP3, EI 30 atd.). Agent kombinuje fulltext search a property set lookup.</figcaption>
+      </figure>
+
       <h2>Workflows, co už běží</h2>
       <p>
         Místo jednoho generického chatu definujeme <strong>workflows</strong> — pojmenované úlohy s povinnými vstupy, zdroji a výstupním schématem. Pilot obsahuje:
@@ -96,6 +106,11 @@ const post = {
         <li><strong>Pasportizace IFC modelu</strong> — soupis prvků, ploch, objemů, generování dokumentace. Volitelné výstupy: tabulka / Excel / půdorysy.</li>
         <li><strong>Kontrola požární bezpečnosti</strong> — automatická kontrola podle ČSN 73 0802 nad uživatelsky zvolenými patry a typem budovy. Výstup: status + odkaz na článek normy.</li>
       </ul>
+
+      <figure class="article-figure">
+        <img src={`${base}images/dimko/dimko-revit-export.png`} alt="DIMKO hodnotí kvalitu IFC exportu — identifikuje Autodesk Revit 2022 (CSY), schéma IFC4, 467 000 vlastností, 14 podlaží, ~1 140 proxy prvků" loading="lazy" />
+        <figcaption>Hodnocení kvality IFC exportu. Agent identifikuje nativní software (Revit 2022 CSY), verzi schématu, informační hustotu (467k IfcPropertySingleValue) a podíl proxy prvků.</figcaption>
+      </figure>
 
       <h2>Proč to píšeme open-source</h2>
       <p>
