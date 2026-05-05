@@ -14,6 +14,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     </a>
     <nav class="mobile-menu" id="mobile-menu">
       <div class="nav-links">
+        <a href={`${base}dimko`} class="nav-dimko">00 / DIMKO</a>
         <a href="#sluzby">01 / Služby</a>
         <a href="#reference">02 / Reference</a>
         <a href={`${base}blog`}>03 / Blog</a>
@@ -33,10 +34,10 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   <div class="hero-scanline"></div>
 
   <div class="container hero-content">
-    <div class="hero-tag">
+    <a href={`${base}blog/dimko-ai-asistent-ifc`} class="hero-tag" data-cursor="hover">
       <span class="dot"></span>
-      <span class="mono">Pre-launch 2026 — Buďte u zrodu digitalizace stavebnictví</span>
-    </div>
+      <span class="mono">Pre-launch 2026 — DIMKO: u zrodu digitalizace českého stavebnictví →</span>
+    </a>
 
     <h1>
       <span class="line"><span data-scramble="Stavíme">Stavíme</span></span>
@@ -116,6 +117,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       </p>
     </div>
 
+    <div class="services-wrap" id="services-wrap">
     <div class="services-grid reveal">
       <article class="service-card" data-cursor="hover">
         <span class="service-num">S/01</span>
@@ -200,6 +202,15 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           <span class="service-tag">Maintenance</span>
         </div>
       </article>
+    </div>
+
+    <div class="dimko-pop" id="dimko-pop" aria-hidden="true">
+      <a href={`${base}blog/dimko-ai-asistent-ifc`} data-cursor="hover">
+        <span class="dimko-dot"></span>
+        <span>DIMKO — Launching soon</span>
+        <svg class="dimko-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
     </div>
 
     <!-- Process -->
@@ -369,6 +380,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         <h5>Navigace</h5>
         <ul>
           <li><a href="#hero">Domů</a></li>
+          <li><a href={`${base}dimko`}>DIMKO</a></li>
           <li><a href="#sluzby">Služby</a></li>
           <li><a href="#reference">Reference</a></li>
           <li><a href={`${base}blog`}>Blog</a></li>

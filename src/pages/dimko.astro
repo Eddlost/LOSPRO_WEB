@@ -1,0 +1,187 @@
+---
+import LayoutFuturistic from '../layouts/LayoutFuturistic.astro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+
+<LayoutFuturistic title="DIMKO — Coming online soon | LOSPRO">
+
+<!-- ======================= NAV ======================= -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href={base} class="logo" data-cursor="hover">
+      <span class="logo-mark">L</span>
+      <span>LOSPRO</span>
+    </a>
+    <nav class="mobile-menu" id="mobile-menu">
+      <div class="nav-links">
+        <a href={`${base}dimko`} class="nav-dimko">00 / DIMKO</a>
+        <a href={`${base}#sluzby`}>01 / Služby</a>
+        <a href={`${base}#reference`}>02 / Reference</a>
+        <a href={`${base}blog`}>03 / Blog</a>
+        <a href={`${base}#kontakt`}>04 / Kontakt</a>
+      </div>
+    </nav>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= DIMKO HERO ======================= -->
+<section class="dimko-hero">
+  <div class="grid-lines"></div>
+  <div class="container dimko-hero-inner">
+    <div class="dimko-badge">
+      <span class="dimko-dot"></span>
+      <span>Pre-launch / 2026</span>
+    </div>
+
+    <h1 class="dimko-title">
+      DIMKO<span class="dimko-cursor">_</span>
+    </h1>
+
+    <p class="dimko-status">Coming online soon.</p>
+
+    <p class="dimko-lead">
+      Plně integrovaný systém řízení staveb. AI agent nad IFC modelem,
+      pasportizace, kontroly podle ČSN, půdorysy a Excel reporty —
+      v jednom rozhraní. První kámen už pilotně běží na GitHubu.
+    </p>
+
+    <div class="dimko-actions">
+      <a href="https://github.com/prokop321/tools" target="_blank" rel="noopener" class="btn btn-primary dimko-btn-purple" data-cursor="hover">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.01c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.18.92-.26 1.91-.39 2.89-.39.98 0 1.97.13 2.89.39 2.2-1.49 3.16-1.18 3.16-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.13v3.16c0 .31.21.67.8.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+        github.com/prokop321/tools
+      </a>
+      <a href={`${base}blog/dimko-ai-asistent-ifc`} class="btn btn-ghost" data-cursor="hover">
+        Co DIMKO umí dnes
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="dimko-meta">
+      <div class="cell"><span class="k">// 01</span><span class="v">IFC</span><span class="muted">native input</span></div>
+      <div class="cell"><span class="k">// 02</span><span class="v">Gemini 3</span><span class="muted">agent core</span></div>
+      <div class="cell"><span class="k">// 03</span><span class="v">Blender</span><span class="muted">3D pipeline</span></div>
+      <div class="cell"><span class="k">// 04</span><span class="v">ČSN</span><span class="muted">norm checks</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ROADMAP ======================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-head-text">
+        <span class="section-number">// 00 — DIMKO</span>
+        <h2>Roadmapa<br/>k full launch.</h2>
+      </div>
+      <p class="muted" style="max-width: 420px;">
+        Stavíme po krocích. Otevřeně, v repozitáři, s reálnými projekty místo demo dat.
+      </p>
+    </div>
+
+    <div class="dimko-roadmap reveal">
+      <div class="roadmap-step done">
+        <span class="rs-num">→ 01</span>
+        <span class="rs-tag">Hotovo</span>
+        <h4>Pilot agent (CLI/API)</h4>
+        <p>IFC search, Python/ifcopenshell skripty, Blender bridge, Excel exporty, script library, multi-model workflow.</p>
+      </div>
+      <div class="roadmap-step done">
+        <span class="rs-num">→ 02</span>
+        <span class="rs-tag">Hotovo</span>
+        <h4>Workflows: Pasportizace + ČSN 73 0802</h4>
+        <p>Pojmenované úlohy s povinnými vstupy, knihovna českých norem (zatím požární bezpečnost).</p>
+      </div>
+      <div class="roadmap-step active">
+        <span class="rs-num">→ 03</span>
+        <span class="rs-tag">Probíhá</span>
+        <h4>Web UI + auth</h4>
+        <p>Webové rozhraní nad agentem, projekty, sessiony, audit trail.</p>
+      </div>
+      <div class="roadmap-step">
+        <span class="rs-num">→ 04</span>
+        <span class="rs-tag">Plán Q3</span>
+        <h4>Rozšíření normové základny</h4>
+        <p>Tepelná technika, akustika, statika. Cross-discipline checks.</p>
+      </div>
+      <div class="roadmap-step">
+        <span class="rs-num">→ 05</span>
+        <span class="rs-tag">Plán Q4</span>
+        <h4>4D / 5D layer</h4>
+        <p>Harmonogram a rozpočet napojený na stejný IFC. Real-time cash-flow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA ======================= -->
+<section class="section dimko-cta-section">
+  <div class="container">
+    <div class="dimko-cta">
+      <h2>Máte projekt, na kterém by to mělo smysl pilotně nasadit?</h2>
+      <p>Hledáme reálné stavby, ne demo data. Včasní partneři tvoří standard.</p>
+      <div class="dimko-actions" style="margin-top: 2rem;">
+        <a href={`${base}#kontakt`} class="btn btn-primary" data-cursor="hover">
+          Ozvat se
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://github.com/prokop321/tools" target="_blank" rel="noopener" class="btn btn-ghost" data-cursor="hover">
+          Otevřít repo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 1.2rem;">
+          <span class="logo-mark">L</span>
+          <span>LOSPRO</span>
+        </div>
+        <p style="font-size: .9rem; max-width: 320px;">Stavební management nové generace. 25+ let zkušeností v pražském developmentu, BIM-first workflow, transparentní reporting.</p>
+      </div>
+      <div>
+        <h5>Navigace</h5>
+        <ul>
+          <li><a href={base}>Domů</a></li>
+          <li><a href={`${base}dimko`}>DIMKO</a></li>
+          <li><a href={`${base}#sluzby`}>Služby</a></li>
+          <li><a href={`${base}#reference`}>Reference</a></li>
+          <li><a href={`${base}blog`}>Blog</a></li>
+          <li><a href={`${base}#kontakt`}>Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li>info@lospro.cz</li>
+          <li>+420 777 123 456</li>
+          <li>Křižíkova 148<br/>186 00 Praha 8</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Sociální sítě</h5>
+        <ul>
+          <li><a href="https://github.com/prokop321/tools" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Behance</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-big">DIMKO.SOON</div>
+
+    <div class="footer-bottom">
+      <div>© 2026 LOSPRO s.r.o. — IČO 12345678</div>
+      <div>Made with concrete & code.</div>
+    </div>
+  </div>
+</footer>
+
+</LayoutFuturistic>

@@ -210,6 +210,32 @@
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
   }
 
+  /* ---------- DIMKO popup cycle ---------- */
+  const dimkoPop = document.getElementById('dimko-pop');
+  const dimkoWrap = document.getElementById('services-wrap');
+  if (dimkoPop && dimkoWrap) {
+    let triggered = false;
+    let cycleTimer = null;
+    const startCycle = () => {
+      const tick = () => {
+        dimkoPop.classList.add('show');
+        setTimeout(() => dimkoPop.classList.remove('show'), 3000);
+      };
+      tick();
+      cycleTimer = setInterval(tick, 18000); // 3s in + 15s out
+    };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting && !triggered) {
+          triggered = true;
+          startCycle();
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.25 });
+    io.observe(dimkoWrap);
+  }
+
   /* ---------- Service cards 3D tilt ---------- */
   document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
