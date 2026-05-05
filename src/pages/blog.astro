@@ -1,0 +1,123 @@
+---
+import LayoutFuturistic from '../layouts/LayoutFuturistic.astro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
+const posts = [
+  {
+    slug: 'bim-koordinace-v-praxi',
+    cat: 'BIM',
+    date: '2026-04-28',
+    readTime: '6 min',
+    title: 'BIM koordinace v praxi: jak digitální dvojče šetří miliony',
+    excerpt: 'Placeholder perex prvního článku — krátký úvod, který nalákne čtenáře ke kliknutí a popíše hlavní téma textu.',
+  },
+];
+---
+
+<LayoutFuturistic title="Blog — LOSPRO">
+
+<!-- ======================= NAV ======================= -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href={base} class="logo" data-cursor="hover">
+      <span class="logo-mark">L</span>
+      <span>LOSPRO</span>
+    </a>
+    <nav class="mobile-menu" id="mobile-menu">
+      <div class="nav-links">
+        <a href={`${base}#sluzby`}>01 / Služby</a>
+        <a href={`${base}#reference`}>02 / Reference</a>
+        <a href={`${base}blog`}>03 / Blog</a>
+        <a href={`${base}#kontakt`}>04 / Kontakt</a>
+      </div>
+    </nav>
+    <div class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= BLOG HERO ======================= -->
+<section class="blog-hero">
+  <div class="grid-lines"></div>
+  <div class="container">
+    <span class="section-number">// Blog — Insighty z praxe</span>
+    <h1>Stavební<br/>management v textu.</h1>
+    <p>Případové studie, technické deep-divy a poznámky z reálných projektů. Co se v BIM modelu nezobrazí, ale rozhodne stavbu.</p>
+  </div>
+</section>
+
+<!-- ======================= BLOG LIST ======================= -->
+<section class="section">
+  <div class="container">
+    <div class="blog-grid reveal">
+      {posts.map((post) => (
+        <a href={`${base}blog/${post.slug}`} class="blog-card" data-cursor="hover">
+          <div class="blog-meta">
+            <span class="blog-cat">{post.cat}</span>
+            <span>{post.date}</span>
+            <span>{post.readTime} čtení</span>
+          </div>
+          <h3>{post.title}</h3>
+          <p>{post.excerpt}</p>
+          <div class="blog-card-foot">
+            <span>Číst článek</span>
+            <span class="blog-card-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom: 1.2rem;">
+          <span class="logo-mark">L</span>
+          <span>LOSPRO</span>
+        </div>
+        <p style="font-size: .9rem; max-width: 320px;">Stavební management nové generace. 25+ let zkušeností v pražském developmentu, BIM-first workflow, transparentní reporting.</p>
+      </div>
+      <div>
+        <h5>Navigace</h5>
+        <ul>
+          <li><a href={base}>Domů</a></li>
+          <li><a href={`${base}#sluzby`}>Služby</a></li>
+          <li><a href={`${base}#reference`}>Reference</a></li>
+          <li><a href={`${base}blog`}>Blog</a></li>
+          <li><a href={`${base}#kontakt`}>Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li>info@lospro.cz</li>
+          <li>+420 777 123 456</li>
+          <li>Křižíkova 148<br/>186 00 Praha 8</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Sociální sítě</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Behance</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-big">LOSPRO.2026</div>
+
+    <div class="footer-bottom">
+      <div>© 2026 LOSPRO s.r.o. — IČO 12345678</div>
+      <div>Made with concrete & code.</div>
+    </div>
+  </div>
+</footer>
+
+</LayoutFuturistic>

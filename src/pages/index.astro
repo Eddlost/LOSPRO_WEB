@@ -1,5 +1,6 @@
 ---
 import LayoutFuturistic from '../layouts/LayoutFuturistic.astro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <LayoutFuturistic>
@@ -15,7 +16,7 @@ import LayoutFuturistic from '../layouts/LayoutFuturistic.astro';
       <div class="nav-links">
         <a href="#sluzby">01 / Služby</a>
         <a href="#reference">02 / Reference</a>
-        <a href="galerie.html">03 / Galerie</a>
+        <a href={`${base}blog`}>03 / Blog</a>
         <a href="#kontakt">04 / Kontakt</a>
       </div>
     </nav>
@@ -388,7 +389,7 @@ import LayoutFuturistic from '../layouts/LayoutFuturistic.astro';
           <li><a href="#hero">Domů</a></li>
           <li><a href="#sluzby">Služby</a></li>
           <li><a href="#reference">Reference</a></li>
-          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href={`${base}blog`}>Blog</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </div>
