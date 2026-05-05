@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const currentYear = new Date().getFullYear();
 
 const navLinks = [
@@ -21,7 +22,7 @@ const contact = {
 
       <!-- Brand -->
       <div>
-        <img src="/logo.png" alt="LOSPRO Development" class="h-10 w-auto mb-4 brightness-0 invert" />
+        <img src={`${base}logo.png`} alt="LOSPRO Development" class="h-10 w-auto mb-4 brightness-0 invert" />
         <p class="text-sm leading-relaxed text-gray-500 mb-6">
           Bezpečné investice do nemovitostí. Od studie po realizaci.
         </p>

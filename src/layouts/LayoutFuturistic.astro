@@ -1,4 +1,6 @@
 ---
+import '../styles/futuristic.css';
+
 interface Props {
   title?: string;
   description?: string;
@@ -8,6 +10,8 @@ const {
   title = 'LOSPRO — Stavební management 2.0',
   description = 'LOSPRO. Konstrukce. Koordinace. Kontrola. Stavíme digitální páte moderní výstavby s BIM a 25+ lety zkušeností.',
 } = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <!doctype html>
@@ -16,11 +20,10 @@ const {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles/futuristic.css" />
   <title>{title}</title>
 </head>
 <body>
@@ -30,6 +33,6 @@ const {
 
   <slot />
 
-  <script is:inline src="/scripts/futuristic.js"></script>
+  <script src="../scripts/futuristic.js"></script>
 </body>
 </html>

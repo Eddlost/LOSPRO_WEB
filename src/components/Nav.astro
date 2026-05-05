@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const navLinks = [
   { label: 'O nás',     href: '#o-nas' },
   { label: 'Služby',    href: '#sluzby' },
@@ -14,7 +15,7 @@ const navLinks = [
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
     <!-- Logo -->
     <a href="#hero" class="flex items-center">
-      <img src="/logo_text.png" alt="LOSPRO Development" class="h-9 w-auto" />
+      <img src={`${base}logo_text.png`} alt="LOSPRO Development" class="h-9 w-auto" />
     </a>
 
     <!-- Desktop nav -->
